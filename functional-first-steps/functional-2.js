@@ -1,4 +1,4 @@
-let thesis = { name: 'Chris', date: 1935 };
+let thesis = { name: 'Chris', date: 1935, dog: 'Ralph', randomNumber: 12345.3333 };
 
 // Modifying object directly (potentially dangerous);
 function renameThesis(newName) {
@@ -7,14 +7,16 @@ function renameThesis(newName) {
 };
 
 // Taking in the old state and returning a new state with the alterations
-function createNewThesis(oldThesis, newName) {
+function createNewThesis(newName, newDog) {
   return {
+    ...thesis,
     name: newName,
-    date: oldThesis.date,
+    dog: newDog,
   };
 };
 
-renameThesis('Church');
-console.log(thesis);
+// renameThesis('Church');
+// console.log(thesis);
 
-console.log(createNewThesis(thesis, 'Dong'));
+console.log(createNewThesis('Dong', 'Cupcake'));
+console.log(createNewThesis('Wong', 'Hotdog'));
