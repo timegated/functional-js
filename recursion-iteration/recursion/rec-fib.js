@@ -58,6 +58,7 @@ const memoizer = function (memo, formula) {
 };
 
 // No all we need to do is supply whatever formula we need to operate on some data.
+// Passing functions around as values. - First Class Characteristic
 const fibMemo = memoizer([0, 1], function fiboNacho(recur, n) {
   return recur(n - 1) + recur(n - 2);
 });
