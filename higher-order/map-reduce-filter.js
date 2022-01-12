@@ -29,8 +29,14 @@ console.log(array1.reduce((item, acc) => {
 
 const map = (array, func) => {
   if (array.length === 0 && Array.isArray(array)) return [];
-  
+  const copy = []
+  for (let i = 0; i < array.length; i++) {
+    copy.push(func(array[i]));
+  }
+  return copy;
 };
+
+console.log(map([1, 2, 3], (item) => item + 5));
 
 const filter = () => {
 
