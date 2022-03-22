@@ -12,7 +12,7 @@ const AuthController = {
   },
   handleResponse(resp) {
     if (!resp.ok) this.displayError(resp.msg);
-  }gi
+  }
 };
 
 const LoginFormController = Object.assign(Object.create(AuthController), {
